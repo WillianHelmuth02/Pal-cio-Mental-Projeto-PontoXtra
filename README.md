@@ -1,0 +1,57 @@
+# Memória do PontoXtra: o palácio mental do projeto
+
+Esta pasta reúne o contexto duradouro do projeto para o desenvolvedor e para assistentes de IA. Foi criada em 22/10/2026, a pedido do responsável pelo projeto. É uma memória explícita em arquivos: precisa ser lida e mantida; não depende de uma IA lembrar conversas anteriores.
+
+## Entrada e salas
+
+| Sala | Conteúdo | Quando consultar |
+| --- | --- | --- |
+| [01_CONTEXTO.md](01_CONTEXTO.md) | Problema, objetivo, perfis, arquitetura e limites | No início de qualquer trabalho |
+| [02_ESTADO_ATUAL.md](02_ESTADO_ATUAL.md) | O que existe, evidências e diferença entre código e requisito | Antes de avaliar progresso ou implementar |
+| [decisoes/DEC-001-DUPLA-APROVACAO.md](decisoes/DEC-001-DUPLA-APROVACAO.md) | Duas aprovações obrigatórias do ADM | Qualquer trabalho com jornadas, permissões, pagamento ou status |
+| [03_PROXIMOS_PASSOS.md](03_PROXIMOS_PASSOS.md) | Pendências priorizadas e critérios de aceite | Ao planejar a próxima entrega |
+| [04_MAPA_DE_FONTES.md](04_MAPA_DE_FONTES.md) | Localização de documentos e código | Para confirmar uma informação |
+| [05_HISTORICO.md](05_HISTORICO.md) | Registro de alterações relevantes | Para entender a evolução |
+
+## Como interpretar a memória
+
+1. A instrução atual do usuário é a referência para o trabalho solicitado.
+2. Decisões de produto aceitas registram o comportamento desejado, mesmo quando o código ainda não o implementa.
+3. Código e verificações executadas mostram o comportamento efetivamente entregue.
+4. O artigo da pré-banca é uma referência histórica de especificação; decisões posteriores podem revisá-lo.
+5. Propostas técnicas e questões em aberto não se tornam decisões do usuário só por estarem escritas aqui.
+
+Ao encontrar conflito, registre a diferença e trabalhe com essas categorias. Não apresente uma regra documentada como funcionalidade pronta.
+
+## Protocolo de atualização
+
+- Nova decisão: criar `decisoes/DEC-NNN-TITULO.md`, usando o modelo abaixo, e adicionar ao índice.
+- Implementação: atualizar o estado atual somente depois de conferir código e resultados de verificação.
+- Descoberta: registrar fonte, data e limites da evidência. Evitar listas de conclusões sem referência.
+- Mudança de regra: manter o histórico; indicar qual decisão foi substituída e por qual.
+- Conclusão de tarefa: registrar o resultado em `05_HISTORICO.md` e revisar os próximos passos.
+- Nunca copiar credenciais, tokens ou dados pessoais para estes arquivos.
+
+## Modelo de decisão
+
+```markdown
+# DEC-NNN: título
+Data:
+Situação: proposta / aceita / substituída
+Origem: instrução do usuário ou fonte identificada
+Implementação: pendente / parcial / concluída, com evidências
+
+## Contexto e problema
+## Decisão de produto
+## Consequências e invariantes
+## Proposta técnica, se houver
+## Questões em aberto
+## Critérios de aceite
+## Fontes e arquivos afetados
+```
+
+## Portabilidade
+
+`PontoXtra/AGENTS.md`, `front/AGENTS.md` e `back/AGENTS.md` apontam para esta memória. Agentes que reconhecem `AGENTS.md` recebem esse caminho no escopo correspondente. Para ferramentas que não leem esse arquivo automaticamente, peça explicitamente a leitura de `Memoria_Projeto/README.md` ao abrir o projeto.
+
+A pasta fica ao lado dos dois repositórios, e não dentro deles. Ao clonar apenas `front` ou `back`, será necessário compartilhar também esta memória. Nenhum repositório novo foi inicializado para alterar a organização existente.
