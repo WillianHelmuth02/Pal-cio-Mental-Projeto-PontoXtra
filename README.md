@@ -12,6 +12,7 @@ Esta pasta reúne o contexto duradouro do projeto para o desenvolvedor e para as
 | [03_PROXIMOS_PASSOS.md](03_PROXIMOS_PASSOS.md) | Pendências priorizadas e critérios de aceite | Ao planejar a próxima entrega |
 | [04_MAPA_DE_FONTES.md](04_MAPA_DE_FONTES.md) | Localização de documentos e código | Para confirmar uma informação |
 | [05_HISTORICO.md](05_HISTORICO.md) | Registro de alterações relevantes | Para entender a evolução |
+| [06_QUADRO_DE_TAREFAS_PROPOSTA.md](06_QUADRO_DE_TAREFAS_PROPOSTA.md) | Proposta de grandes tarefas, tarefas e subtarefas com estados | Para avaliar o formato de acompanhamento; ainda não consolidado como quadro oficial |
 
 ## Como interpretar a memória
 

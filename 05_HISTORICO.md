@@ -1,5 +1,13 @@
 # 05. Histórico de decisões e entregas
 
+## 22/10/2026 - Proposta de quadro hierárquico
+
+- O responsável pediu uma lista completa do que foi feito, está em andamento e falta fazer, com três níveis: grandes tarefas, tarefas e subtarefas.
+- Criada a proposta `06_QUADRO_DE_TAREFAS_PROPOSTA.md`, preenchida com o estado já documentado e as pendências conhecidas.
+- Quadro inclui IDs, prioridades, dependências, pontos em aberto, critérios de conclusão e modelo de ficha de acompanhamento.
+- Formato apresentado para avaliação antes de consolidá-lo como quadro oficial; listas existentes foram preservadas.
+- Trabalho atual é documental. Nenhuma tarefa de implementação listada foi iniciada por esta entrega.
+
 ## 22/10/2026 - Avaliação do estado do projeto
 
 - Comparação da implementação com o artigo de pré-banca, antes da nova decisão de negócio.
