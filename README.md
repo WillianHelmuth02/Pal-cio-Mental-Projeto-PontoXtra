@@ -4,6 +4,8 @@ Esta pasta reúne o contexto duradouro do projeto para o desenvolvedor e para as
 
 ## Entrada e salas
 
+Configuração Android e pendências de push: [07_NOTIFICACOES_CONFIGURACAO.md](07_NOTIFICACOES_CONFIGURACAO.md), atualizado em 23/10/2026.
+
 | Sala | Conteúdo | Quando consultar |
 | --- | --- | --- |
 | [01_CONTEXTO.md](01_CONTEXTO.md) | Problema, objetivo, perfis, arquitetura e limites | No início de qualquer trabalho |

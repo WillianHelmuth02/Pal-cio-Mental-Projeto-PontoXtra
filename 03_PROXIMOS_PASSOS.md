@@ -1,5 +1,7 @@
 # 03. Próximos passos
 
+**23/10/2026 — preparação de push:** seguir as pendências em [07_NOTIFICACOES_CONFIGURACAO.md](07_NOTIFICACOES_CONFIGURACAO.md). Expo/EAS e credencial FCM V1 preparados; integração, assinatura, build e teste em aparelho pendentes. Conferir estado de código e banco após reversão informada pelo responsável antes de retomar dupla aprovação.
+
 Última atualização: 22/10/2026.
 
 Entrega adicional concluída: exclusão lógica da própria jornada pelo criador, somente antes de marcações, conforme [DEC-002](decisoes/DEC-002-EXCLUSAO-PELO-CRIADOR.md). Ao executar o roteiro integrado, validar também essa ação com login real; ao implementar a dupla aprovação, adaptar sua disponibilidade aos novos estados.

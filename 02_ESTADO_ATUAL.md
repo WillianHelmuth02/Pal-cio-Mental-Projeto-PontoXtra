@@ -1,5 +1,7 @@
 # 02. Estado atual e diferença para a regra vigente
 
+**23/10/2026 — notificações:** projeto Expo vinculado ao frontend, pacote Android e eas.json configurados; FCM V1 cadastrado pelo responsável na EAS. google-services.json presente, mas ainda sem googleServicesFile no app.json; expo-notifications ausente do package.json. Usuário informou reversão da implementação anterior. Infraestrutura parcial não comprova dupla aprovação ou push funcionando. Ver [registro de configuração](07_NOTIFICACOES_CONFIGURACAO.md). Banco não foi inspecionado nesta etapa; reversão do código não comprova reversão de migrações.
+
 Última inspeção de código: 22/10/2026. Backend: d8da016. Frontend: 531e654.
 
 **Atualização posterior em 22/10/2026:** os commits acima identificam a avaliação inicial. A exclusão lógica pelo criador foi implementada em alterações locais posteriores, conforme a [DEC-002](decisoes/DEC-002-EXCLUSAO-PELO-CRIADOR.md). A autoria é validada no servidor; a ação exige ausência de qualquer marcação. RH mantém seu cancelamento administrativo. Verificações desta entrega: 402 testes do backend, build e lint aprovados; tipos, lint e dois scripts do frontend aprovados. Não houve migração nem escrita em dados reais; tela não foi validada manualmente com login nesta entrega.

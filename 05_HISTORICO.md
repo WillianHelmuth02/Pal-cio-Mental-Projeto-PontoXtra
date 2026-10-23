@@ -1,5 +1,13 @@
 # 05. Histórico de decisões e entregas
 
+## 23/10/2026 - Preparação Expo/EAS e Firebase para notificações
+
+- Responsável informou reversão da implementação anterior e realizou configuração assistida: login EAS, vínculo ao projeto Expo existente, slug pontoxtra, geração de eas.json e pacote com.pontoxtra.mobile.
+- Criou projeto Firebase e aplicativo Android; enviou conta de serviço pelo EAS CLI, que confirmou atribuição FCM V1 ao pacote correto. Não foi configurado FCM Legacy nem submissão à loja.
+- Arquivos app.json/eas.json conferidos; google-services.json presente, mas ligação googleServicesFile e dependência expo-notifications ainda ausentes. Sem leitura de credenciais privadas, teste de envio, build ou alteração de código nesta entrega documental.
+- Criado 07_NOTIFICACOES_CONFIGURACAO.md com resumo, tarefas e limites; índice, estado atual e próximos passos atualizados. Situação: infraestrutura parcial, recurso ainda não homologado.
+
+
 ## 22/10/2026 - DEC-003: lixeira e remoção completa no banco
 
 - Responsável escolheu explicitamente apagar jornada e histórico vinculado na exclusão definitiva; consulta na lixeira somente até essa ação.
