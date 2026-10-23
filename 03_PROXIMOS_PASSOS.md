@@ -2,6 +2,8 @@
 
 Última atualização: 22/10/2026.
 
+Entrega adicional concluída: exclusão lógica da própria jornada pelo criador, somente antes de marcações, conforme [DEC-002](decisoes/DEC-002-EXCLUSAO-PELO-CRIADOR.md). Ao executar o roteiro integrado, validar também essa ação com login real; ao implementar a dupla aprovação, adaptar sua disponibilidade aos novos estados.
+
 ## Prioridade 1: alinhar o ciclo às duas aprovações
 
 - Documentação da regra e da memória: concluída nesta tarefa.

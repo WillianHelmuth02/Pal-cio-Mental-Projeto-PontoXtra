@@ -2,6 +2,8 @@
 
 Última inspeção de código: 22/10/2026. Backend: d8da016. Frontend: 531e654.
 
+**Atualização posterior em 22/10/2026:** os commits acima identificam a avaliação inicial. A exclusão lógica pelo criador foi implementada em alterações locais posteriores, conforme a [DEC-002](decisoes/DEC-002-EXCLUSAO-PELO-CRIADOR.md). A autoria é validada no servidor; a ação exige ausência de qualquer marcação. RH mantém seu cancelamento administrativo. Verificações desta entrega: 402 testes do backend, build e lint aprovados; tipos, lint e dois scripts do frontend aprovados. Não houve migração nem escrita em dados reais; tela não foi validada manualmente com login nesta entrega.
+
 ## Requisito vigente versus implementação
 
 **A dupla aprovação foi aceita como regra de produto, mas ainda não foi implementada.** O código inspecionado cria jornadas em EM_ANDAMENTO e permite eventos antes de qualquer decisão do ADM. A autorização atualmente existente ocorre apenas depois da saída e da conferência do RH, para liberar o registro do pagamento.
@@ -17,7 +19,7 @@ Portanto, o sistema atual não atende à aprovação prévia exigida pela [DEC-0
 - Histórico com autor, instante e snapshots; transações e locks nas operações de jornadas.
 - APIs de manutenção de prestadores, funções e setores, com alterações reservadas ao RH.
 - APIs de relatório por período e totais por status; painéis usam parte dos totais.
-- Cancelamento auditável de jornada sem marcações; estado CANCELADO.
+- Exclusão lógica pelo criador antes de marcações e cancelamento administrativo pelo RH; auditoria preservada e estado CANCELADO.
 
 ## Lacunas conhecidas
 

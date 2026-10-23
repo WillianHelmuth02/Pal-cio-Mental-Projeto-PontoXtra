@@ -1,5 +1,14 @@
 # 05. Histórico de decisões e entregas
 
+## 22/10/2026 - DEC-002 e exclusão lógica pelo criador
+
+- Responsável confirmou exclusão somente antes da entrada, preservando o histórico.
+- Implementado acesso do criador à operação existente de cancelamento, mantendo a permissão administrativa do RH.
+- Backend revalida autoria e usuário ativo sob transação; mantém bloqueio de qualquer marcação e dos estados incompatíveis.
+- Interface mostra Excluir jornada nos detalhes, com motivo e confirmação; contrato agora inclui criada_por e a matriz de ações recebe o ID do usuário.
+- Atualizados testes, documentação, estado atual e quadro proposto. Dupla aprovação permanece pendente.
+- Verificação: 402 testes do backend, build e lint aprovados; tipos, lint e dois scripts do frontend aprovados. Não houve migração ou escrita de negócio no banco real, nem teste manual da tela. Testes de persistência são simulados.
+
 ## 22/10/2026 - Proposta de quadro hierárquico
 
 - O responsável pediu uma lista completa do que foi feito, está em andamento e falta fazer, com três níveis: grandes tarefas, tarefas e subtarefas.

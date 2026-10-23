@@ -2,7 +2,7 @@
 
 **Situação deste documento: proposta de organização, aguardando avaliação do responsável.**
 
-Atualização: 22/10/2026. Base: avaliação local e memória do projeto da mesma data. Não houve nova implementação ou nova auditoria técnica para montar este quadro.
+Atualização: 22/10/2026. Base inicial: avaliação local e memória do projeto da mesma data. Atualização posterior: T-04.05 registra a exclusão pelo criador implementada e verificada após a primeira proposta do quadro. O formato do quadro continua em avaliação.
 
 ## 1. Como funciona
 
@@ -42,10 +42,11 @@ Datas de conclusão, responsáveis por execução e prazos não conhecidos ficam
 | GT-08 | Preparar implantação e operação | A fazer | P3 | HTTPS, backups, fuso e desempenho precisam de evidências |
 | GT-09 | Atualizar entrega acadêmica e técnica | A fazer | P4 | Documentos de referência existem; revisão final pendente |
 
-### O que está sendo feito agora
+### O que está sendo acompanhado agora
 
 - T-02.03: apresentar e revisar esta proposta de quadro com o responsável.
 - Nenhuma implementação da dupla aprovação está em andamento nesta etapa documental.
+- Entrega posterior concluída: T-04.05, exclusão lógica pelo criador antes de marcações. A implementação das duas aprovações continua pendente.
 
 ### Próxima entrega sugerida
 
@@ -194,7 +195,17 @@ Após avaliar a organização da memória, a próxima frente técnica é GT-03, 
 - [ ] ST-04.04.03 — **A fazer:** aplicar a política de cancelamento aos novos estados.
 - [ ] ST-04.04.04 — **A fazer:** revisar ações disponíveis e histórico de todas as transições.
 
-**Critério de conclusão:** comportamentos anteriores continuam corretos nas etapas correspondentes e nenhum caminho contorna as duas aprovações.
+### T-04.05. Permitir exclusão lógica pelo criador antes da entrada — Feito
+
+- [x] ST-04.05.01 — Registrar a escolha do responsável e as regras na DEC-002.
+- [x] ST-04.05.02 — Validar no backend autoria, usuário ativo e ausência de marcações; preservar permissão administrativa do RH.
+- [x] ST-04.05.03 — Oferecer Excluir jornada nos detalhes, com justificativa, confirmação e verificação do usuário.
+- [x] ST-04.05.04 — Testar autoria, bloqueios de horários/estado, repetição e preservação de auditoria.
+- [x] ST-04.05.05 — Atualizar documentação e memória com evidências e limites.
+
+Evidência: [DEC-002](decisoes/DEC-002-EXCLUSAO-PELO-CRIADOR.md); 402 testes backend, build/lint e verificações frontend aprovados. A homologação visual/manual e a adaptação aos futuros estados seguem em GT-07 e GT-03/04.
+
+**Critério de conclusão de GT-04:** comportamentos anteriores continuam corretos nas etapas correspondentes e nenhum caminho contorna as duas aprovações.
 
 ## GT-05. Completar cadastros do RH
 
