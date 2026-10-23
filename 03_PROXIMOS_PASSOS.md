@@ -6,6 +6,8 @@ Entrega adicional concluída: exclusão lógica da própria jornada pelo criador
 
 ## Prioridade 1: alinhar o ciclo às duas aprovações
 
+Lixeira e exclusão definitiva concluídas conforme [DEC-003](decisoes/DEC-003-LIXEIRA-E-EXCLUSAO-DEFINITIVA.md). Roteiro manual/Android deve incluir seleção, envio, consulta, restauração e purga. Ao preparar outro ambiente, aplicar migrate-lixeira.js antes de executar o código novo.
+
 - Documentação da regra e da memória: concluída nesta tarefa.
 - Implementação da nova regra: pendente; conferir a [DEC-001](decisoes/DEC-001-DUPLA-APROVACAO.md).
 - Resolver políticas de reenvio, alteração após aprovação, legado, cancelamento e conflito de jornadas.

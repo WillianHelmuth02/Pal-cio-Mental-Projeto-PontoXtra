@@ -9,7 +9,8 @@ Esta pasta reúne o contexto duradouro do projeto para o desenvolvedor e para as
 | [01_CONTEXTO.md](01_CONTEXTO.md) | Problema, objetivo, perfis, arquitetura e limites | No início de qualquer trabalho |
 | [02_ESTADO_ATUAL.md](02_ESTADO_ATUAL.md) | O que existe, evidências e diferença entre código e requisito | Antes de avaliar progresso ou implementar |
 | [decisoes/DEC-001-DUPLA-APROVACAO.md](decisoes/DEC-001-DUPLA-APROVACAO.md) | Duas aprovações obrigatórias do ADM | Qualquer trabalho com jornadas, permissões, pagamento ou status |
-| [decisoes/DEC-002-EXCLUSAO-PELO-CRIADOR.md](decisoes/DEC-002-EXCLUSAO-PELO-CRIADOR.md) | Exclusão lógica pelo criador antes de marcações; implementada | Qualquer trabalho com exclusão, autoria, cancelamento ou CRUD de jornadas |
+| [decisoes/DEC-002-EXCLUSAO-PELO-CRIADOR.md](decisoes/DEC-002-EXCLUSAO-PELO-CRIADOR.md) | Origem do cancelamento pelo criador antes de marcações; revisada pela DEC-003 | Autoria e histórico da evolução do cancelamento |
+| [decisoes/DEC-003-LIXEIRA-E-EXCLUSAO-DEFINITIVA.md](decisoes/DEC-003-LIXEIRA-E-EXCLUSAO-DEFINITIVA.md) | Seleção, lixeira, restauração CANCELADO e remoção física de jornada/histórico | Regra atual de exclusão; sucede a Proposta 003 e revisa a DEC-002 |
 | [03_PROXIMOS_PASSOS.md](03_PROXIMOS_PASSOS.md) | Pendências priorizadas e critérios de aceite | Ao planejar a próxima entrega |
 | [04_MAPA_DE_FONTES.md](04_MAPA_DE_FONTES.md) | Localização de documentos e código | Para confirmar uma informação |
 | [05_HISTORICO.md](05_HISTORICO.md) | Registro de alterações relevantes | Para entender a evolução |

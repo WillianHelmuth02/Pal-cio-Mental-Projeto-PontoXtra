@@ -2,6 +2,8 @@
 
 Data: 22/10/2026. Situação: **aceita**. Implementação: **concluída no código, com verificações automatizadas**; teste visual/manual com login real ainda não executado nesta entrega.
 
+**Evolução posterior:** a [DEC-003](DEC-003-LIXEIRA-E-EXCLUSAO-DEFINITIVA.md) separa Cancelar jornada, Excluir para lixeira e Excluir definitivamente. Ela substitui, abaixo, a preservação permanente de auditoria e a ausência de restauração: é possível restaurar da lixeira como CANCELADO enquanto não houver purga, e a purga apaga jornada e histórico. Autoria e bloqueio de qualquer marcação permanecem vigentes. A descrição abaixo registra a implementação anterior.
+
 ## Origem e decisão
 
 O responsável solicitou que quem criou uma jornada possa excluí-la para completar o CRUD. Em resposta à pergunta sobre o limite da exclusão, escolheu explicitamente: **somente antes da entrada, preservando o histórico**.

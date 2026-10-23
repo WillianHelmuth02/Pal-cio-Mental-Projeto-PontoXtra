@@ -2,7 +2,7 @@
 
 **Situação deste documento: proposta de organização, aguardando avaliação do responsável.**
 
-Atualização: 22/10/2026. Base inicial: avaliação local e memória do projeto da mesma data. Atualização posterior: T-04.05 registra a exclusão pelo criador implementada e verificada após a primeira proposta do quadro. O formato do quadro continua em avaliação.
+Atualização: 22/10/2026. Base inicial: avaliação local e memória do projeto da mesma data. Atualizações posteriores: T-04.05 registra cancelamento pelo criador; T-04.06 registra seleção, lixeira e exclusão física de jornada/histórico, implementados após a primeira proposta do quadro. O formato do quadro continua em avaliação.
 
 ## 1. Como funciona
 
@@ -206,6 +206,18 @@ Após avaliar a organização da memória, a próxima frente técnica é GT-03, 
 Evidência: [DEC-002](decisoes/DEC-002-EXCLUSAO-PELO-CRIADOR.md); 402 testes backend, build/lint e verificações frontend aprovados. A homologação visual/manual e a adaptação aos futuros estados seguem em GT-07 e GT-03/04.
 
 **Critério de conclusão de GT-04:** comportamentos anteriores continuam corretos nas etapas correspondentes e nenhum caminho contorna as duas aprovações.
+
+### T-04.06. Excluir canceladas selecionadas, consultar lixeira e purgar banco — Feito
+
+- [x] ST-04.06.01 — Registrar a escolha de apagar jornada e histórico na exclusão definitiva, na DEC-003.
+- [x] ST-04.06.02 — Criar marcadores de lixeira e migração preservando a base existente; aplicar no banco local.
+- [x] ST-04.06.03 — Implementar envio/restauração/purga em lote com autoria, status, limite e transação.
+- [x] ST-04.06.04 — Retirar lixeira da consulta normal, detalhes e relatórios/totais.
+- [x] ST-04.06.05 — Criar seleção múltipla separada de Entrada, ação Excluir selecionadas e tela /lixeira.
+- [x] ST-04.06.06 — Validar purga física e rollback no MySQL com fixtures temporárias, removidas ao final.
+- [x] ST-04.06.07 — Atualizar guias e memória; registrar que homologação manual/Android ainda pertence a GT-07.
+
+Evidência: [DEC-003](decisoes/DEC-003-LIXEIRA-E-EXCLUSAO-DEFINITIVA.md) e [guia de lixeira](../back/docs/jornadas-lixeira.md). GT-04 continua pendente das duas aprovações; esta entrega não encerra a grande tarefa.
 
 ## GT-05. Completar cadastros do RH
 

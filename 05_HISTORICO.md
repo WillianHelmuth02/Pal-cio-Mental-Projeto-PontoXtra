@@ -1,5 +1,24 @@
 # 05. Histórico de decisões e entregas
 
+## 22/10/2026 - DEC-003: lixeira e remoção completa no banco
+
+- Responsável escolheu explicitamente apagar jornada e histórico vinculado na exclusão definitiva; consulta na lixeira somente até essa ação.
+- Implementados seleção de canceladas em lote, envio à lixeira, consulta de detalhes/histórico, restauração como Cancelado e DELETE definitivo. Cancelar e Excluir passaram a ser ações distintas.
+- Aplicada migração local de campos opcionais, FK e índice, sem apagar jornadas existentes; inspeção posterior confirmou idempotência.
+- Criador ou RH pode gerenciar os registros; outras jornadas/estados/marcações são recusados e lote inválido não é executado parcialmente.
+- Consulta normal, detalhes e relatórios/totais não incluem registros na lixeira.
+- Verificações: 445 testes do backend aprovados, mais um E2E básico; build/lint aprovados. Frontend: tipos, lint, test-api e test-jornadas aprovados; exportação web com a rota /lixeira concluída.
+- Integração MySQL real verificou envio, retirada da lista e dos relatórios, consulta, autoria, restauração, purga física de filhos/pai e rollback após falha na exclusão do pai. Fixtures próprias foram revertidas e sua ausência foi confirmada por ID; registros preexistentes não foram excluídos.
+- Tela não foi validada manualmente com login real em Android; concorrência entre conexões continua pendente. A dupla aprovação não foi implementada por esta entrega.
+
+## 22/10/2026 - Proposta de lixeira e exclusão definitiva
+
+- Responsável solicitou exclusão da visualização de jornadas canceladas selecionadas, consulta posterior em lixeira e remoção completa no banco, aceitando sugestões.
+- Conferidos seleção única atual, consultas, histórico e chave estrangeira para jornadas.
+- Preparada proposta em duas etapas: Excluir envia à lixeira; Excluir definitivamente remove fisicamente depois.
+- Apresentada decisão de retenção ao responsável: apagar ou preservar histórico na purga. Proposta permanece em avaliação até a resposta.
+- Código, schema e dados de negócio não foram alterados por essa análise.
+
 ## 22/10/2026 - DEC-002 e exclusão lógica pelo criador
 
 - Responsável confirmou exclusão somente antes da entrada, preservando o histórico.

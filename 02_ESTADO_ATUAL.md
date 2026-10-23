@@ -6,6 +6,8 @@
 
 ## Requisito vigente versus implementação
 
+**Atualização de exclusão:** [DEC-003](decisoes/DEC-003-LIXEIRA-E-EXCLUSAO-DEFINITIVA.md) implementada após a DEC-002: cancelamento e envio à lixeira são ações distintas; canceladas selecionadas saem da consulta normal, podem ser consultadas/restauradas na lixeira e podem ser apagadas definitivamente junto do histórico. Campos de lixeira e FK/índice foram adicionados por migração no banco local sem apagar dados existentes. Integração MySQL com fixtures confirmou purga física e rollback; nenhuma fixture permaneceu. Detalhes e relatórios normais excluem a lixeira. Dupla aprovação continua pendente.
+
 **A dupla aprovação foi aceita como regra de produto, mas ainda não foi implementada.** O código inspecionado cria jornadas em EM_ANDAMENTO e permite eventos antes de qualquer decisão do ADM. A autorização atualmente existente ocorre apenas depois da saída e da conferência do RH, para liberar o registro do pagamento.
 
 Portanto, o sistema atual não atende à aprovação prévia exigida pela [DEC-001](decisoes/DEC-001-DUPLA-APROVACAO.md). Não afirmar que há duas aprovações só porque a documentação já foi atualizada.

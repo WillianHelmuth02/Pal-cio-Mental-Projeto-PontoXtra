@@ -24,6 +24,8 @@ A [DEC-001](decisoes/DEC-001-DUPLA-APROVACAO.md) é a fonte detalhada dessa regr
 
 ## Limites do MVP
 
+Gestão de canceladas: criador ou RH pode cancelar antes de marcações, enviar canceladas selecionadas à lixeira e restaurá-las como CANCELADO. A exclusão definitiva, confirmada à parte, remove jornada e histórico vinculado do banco operacional, conforme [DEC-003](decisoes/DEC-003-LIXEIRA-E-EXCLUSAO-DEFINITIVA.md). Não aplicar essa purga a jornadas executadas ou pagas.
+
 Pagamento significa registro administrativo de quitação. Não inclui transferência bancária. Não estão previstos folha celetista completa, encargos/eSocial, integrações contábeis legadas, biometria avançada, geolocalização obrigatória ou equipamentos físicos de ponto.
 
 Não acrescentar esses recursos como exigência implícita da dupla aprovação.
