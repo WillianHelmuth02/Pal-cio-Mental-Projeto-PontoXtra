@@ -1,5 +1,14 @@
 # 05. Histórico de decisões e entregas
 
+## 23/10/2026 - Implementação de notificações internas e suporte push
+
+- Implementados módulo autenticado de notificações, persistência/fila transacional, worker Expo com recibos, leitura por destinatário e gestão de dispositivos. Avisos atuais: saída, conferência e autorização/rejeição de pagamento. Contratos para aprovação inicial preparados; fluxo inicial não foi implementado nesta entrega.
+- Tela /notificacoes e contador, ativação por permissão explícita, registro automático quando já autorizado, desassociação no logout e abertura da jornada ao tocar no push. Configurados expo-notifications e googleServicesFile; .gitignore protege JSONs privados usuais.
+- Schema existente inspecionado/preparado; MySQL real com fixtures verificou leitura/propriedade/lixeira/cascata de purga e rollback. Dados temporários não permaneceram; nenhum push externo foi enviado.
+- 487 testes backend aprovados, build/lint e tipos/lint frontend aprovados, scripts API/jornadas/push e exportação web aprovados. Push nativo validado com SDK simulado, sem homologação física. .env real preservado; habilitação do worker, assinatura e APK permanecem pendentes.
+- Criado back/docs/notificacoes.md e atualizadas memória, estado e próximos passos. Não iniciado build remoto nem publicação.
+
+
 ## 23/10/2026 - Preparação Expo/EAS e Firebase para notificações
 
 - Responsável informou reversão da implementação anterior e realizou configuração assistida: login EAS, vínculo ao projeto Expo existente, slug pontoxtra, geração de eas.json e pacote com.pontoxtra.mobile.

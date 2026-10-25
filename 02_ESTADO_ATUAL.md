@@ -1,5 +1,7 @@
 # 02. Estado atual e diferença para a regra vigente
 
+**Entrega de código em 23/10/2026 — notificações:** avisos internos com contador/leitura, cadastro de dispositivos, fila push Expo com recibos e integração com saída/conferência/decisão de pagamento implementados. Frontend configurado para Firebase e SDK 57. 487 testes backend aprovados; build/lint, tipos, scripts frontend e exportação web aprovados. MySQL real validou fixtures e cascata na purga com rollback. Push no aparelho ainda não homologado; worker depende de PUSH_NOTIFICATIONS_ENABLED=true. Aprovação inicial continua pendente. Esta atualização supera a descrição de dependências ausentes no parágrafo de preparação abaixo. Ver [07_NOTIFICACOES_CONFIGURACAO.md](07_NOTIFICACOES_CONFIGURACAO.md).
+
 **23/10/2026 — notificações:** projeto Expo vinculado ao frontend, pacote Android e eas.json configurados; FCM V1 cadastrado pelo responsável na EAS. google-services.json presente, mas ainda sem googleServicesFile no app.json; expo-notifications ausente do package.json. Usuário informou reversão da implementação anterior. Infraestrutura parcial não comprova dupla aprovação ou push funcionando. Ver [registro de configuração](07_NOTIFICACOES_CONFIGURACAO.md). Banco não foi inspecionado nesta etapa; reversão do código não comprova reversão de migrações.
 
 Última inspeção de código: 22/10/2026. Backend: d8da016. Frontend: 531e654.

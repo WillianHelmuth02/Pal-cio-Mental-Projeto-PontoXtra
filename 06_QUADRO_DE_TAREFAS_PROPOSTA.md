@@ -2,6 +2,8 @@
 
 **Situação deste documento: proposta de organização, aguardando avaliação do responsável.**
 
+Atualização de 23/10/2026: GT-10 acrescentada para notificações. Código e testes automatizados concluídos; recebimento real em APK ainda pendente. GT-03 permanece pendente após reversão informada pelo responsável.
+
 Atualização: 22/10/2026. Base inicial: avaliação local e memória do projeto da mesma data. Atualizações posteriores: T-04.05 registra cancelamento pelo criador; T-04.06 registra seleção, lixeira e exclusão física de jornada/histórico, implementados após a primeira proposta do quadro. O formato do quadro continua em avaliação.
 
 ## 1. Como funciona
@@ -33,6 +35,7 @@ Datas de conclusão, responsáveis por execução e prazos não conhecidos ficam
 | ID | Grande tarefa | Estado | Prioridade | Situação real |
 | --- | --- | --- | --- | --- |
 | GT-01 | Base técnica e acesso | Feito | Base existente | Implementação observada; homologação fica em GT-07 |
+| GT-10 | Notificações internas e push Android | A fazer | P1, junto de GT-03 | Entrega parcial: código pronto para eventos atuais; APK e validação real pendentes |
 | GT-02 | Memória e organização do projeto | Em andamento | Atual | Memória criada; formato do quadro em avaliação |
 | GT-03 | Duas aprovações do ADM | A fazer | P1 | Regra documentada; implementação não iniciada nesta entrega |
 | GT-04 | Adequar o núcleo de jornadas | A fazer | P1, junto de GT-03 | Fluxo anterior existe; integração ao novo ciclo pendente |
@@ -396,3 +399,40 @@ Modelo proposto para tarefas ativas ou com bloqueios; evita repetir uma ficha ex
 ## 6. Revisão pelo responsável
 
 Esta proposta pode ser ajustada em estrutura, quantidade de detalhes, nomes dos estados e divisão das entregas. A estrutura ainda não foi consolidada como quadro oficial. A avaliação solicitada é sobre a organização; não autoriza automaticamente implementar as tarefas listadas.
+
+## GT-10 — Notificações internas e push Android
+
+Estado: A fazer (entrega parcial de código em 23/10/2026; homologação física pendente).
+
+### T-10.01 — Preparar Expo/EAS/Firebase — Feito
+
+- ST-10.01.01 — Feito: vincular projeto Expo e configurar pacote Android/eas.json.
+- ST-10.01.02 — Feito: cadastrar projeto/app Firebase e credencial FCM V1, confirmado pelo terminal do responsável.
+- ST-10.01.03 — Feito: configurar googleServicesFile, plugin e dependência expo-notifications compatível com SDK 57.
+
+### T-10.02 — Avisos e dispositivos no backend — Feito
+
+- ST-10.02.01 — Feito: API autenticada por destinatário, leitura, paginação e contador.
+- ST-10.02.02 — Feito: registro/desativação de tokens e reassociação entre contas.
+- ST-10.02.03 — Feito: persistência transacional e fila push com lease, tentativas e recibos.
+- ST-10.02.04 — Feito: conectar saída, conferência e decisão de pagamento; cascata na purga da jornada.
+
+### T-10.03 — Interface de notificações — Feito
+
+- ST-10.03.01 — Feito: lista de avisos, contador e marcar como lida.
+- ST-10.03.02 — Feito: permissão explícita, cadastro do celular e remoção no logout.
+- ST-10.03.03 — Feito: abertura da jornada por push e separação entre contas; fallback web.
+
+### T-10.04 — Integrar aprovação inicial — A fazer
+
+- ST-10.04.01 — A fazer: implementar GT-03; contratos de aviso preparados não substituem a regra de negócio.
+- ST-10.04.02 — A fazer: disparar pendência e decisão de realização nas transações correspondentes.
+
+### T-10.05 — Validar e ativar push no aparelho — A fazer
+
+- ST-10.05.01 — Feito: 487 testes backend, build/lint, tipos/lint frontend e scripts API/jornadas/push; E2E básico aprovado.
+- ST-10.05.02 — Feito: MySQL com fixtures e rollback; fluxos de jornadas/lixeira permanecem passando. Bundles web/Android exportados (não são APK).
+- ST-10.05.03 — A fazer: API acessível ao celular, assinatura e APK preview, ativar worker no ambiente.
+- ST-10.05.04 — A fazer: receber em aparelho com app aberto/fechado, testar toque, logout e troca de conta. Nenhum envio real demonstrado.
+
+Evidências e instruções: 07_NOTIFICACOES_CONFIGURACAO.md e ../back/docs/notificacoes.md.

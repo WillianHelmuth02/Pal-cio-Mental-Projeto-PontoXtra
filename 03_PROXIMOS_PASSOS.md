@@ -1,5 +1,7 @@
 # 03. Próximos passos
 
+**Após implementação das notificações em 23/10/2026:** API, tela e suporte push concluídos no código; eventos atuais de pagamento conectados. Próxima prioridade funcional: dupla aprovação, conectando contratos de avisos da realização. Próxima validação mobile: assinatura/APK preview, URL da API acessível, worker habilitado e recebimento real. Não interpretar suporte push testado com mocks como recebimento confirmado. Guia: [notificacoes.md](../back/docs/notificacoes.md).
+
 **23/10/2026 — preparação de push:** seguir as pendências em [07_NOTIFICACOES_CONFIGURACAO.md](07_NOTIFICACOES_CONFIGURACAO.md). Expo/EAS e credencial FCM V1 preparados; integração, assinatura, build e teste em aparelho pendentes. Conferir estado de código e banco após reversão informada pelo responsável antes de retomar dupla aprovação.
 
 Última atualização: 22/10/2026.

@@ -21,3 +21,5 @@
 | Testes | `back/src/**/*.spec.ts`, `back/test/app.e2e-spec.ts`, `front/scripts/test-api.cjs`, `front/scripts/test-jornadas.cjs` |
 
 Os PDFs originais não foram reescritos nesta tarefa. Sua permanência não indica que a decisão anterior de uma única aprovação continua vigente.
+
+Notificações (23/10/2026): `back/src/notificacoes/`, `back/src/migrate-notificacoes.ts`, `back/src/check-notificacoes.ts`, `back/docs/notificacoes.md`; frontend em `src/contexts/notificacoes.tsx`, `src/components/notificacoes-screen.tsx`, `src/services/push.native.ts` e `scripts/test-push.cjs`. Configuração e limites em [07_NOTIFICACOES_CONFIGURACAO.md](07_NOTIFICACOES_CONFIGURACAO.md).

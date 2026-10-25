@@ -2,6 +2,18 @@
 
 Registro: 23/10/2026. Situação: infraestrutura parcialmente configurada; notificações ainda não homologadas no aplicativo.
 
+## Atualização de implementação — 23/10/2026
+
+Esta seção atualiza a situação histórica descrita abaixo. Implementados API de avisos por destinatário, leitura, paginação/contador e dispositivos; fila transacional com worker Expo, tentativas, recibos e desativação de token inválido. Eventos conectados: saída → RH, conferência → ADM, decisão de pagamento → RH/criador, excluindo autor. Aprovação inicial ainda não implementada; contratos de aviso preparados sem disparo fictício na criação.
+
+Frontend recebeu tela /notificacoes, contador nos cabeçalhos, atualização enquanto ativo, botão de permissão push, registro/reassociação do token e desativação no logout, abertura da jornada ao tocar no push e fallback web. Instalado expo-notifications compatível com SDK 57; plugin e googleServicesFile configurados. Projeto/pacote do arquivo Firebase conferidos. .gitignore protege nomes usuais de JSON privado; nenhum segredo copiado para a memória.
+
+Schema encontrado já com as três tabelas da tentativa anterior; preparação idempotente confirmou colunas. Integração MySQL verificou registro, leitura idempotente, propriedade, lixeira e cascata jornada → notificações → entregas; fixtures revertidas. Não se concluiu que outras migrações foram revertidas. Push externo não foi enviado.
+
+Verificações: 487 testes do backend aprovados; build/lint backend e tipos/lint frontend aprovados; test-api, test-jornadas e test-push aprovados; exportação web com /notificacoes concluída. SDK e rede Expo são simulados nos testes de push.
+
+Pendências vigentes: implementar dupla aprovação; configurar API acessível pelo celular; gerar assinatura/APK; habilitar PUSH_NOTIFICATIONS_ENABLED=true no ambiente de execução; testar recebimento real. Nenhum build remoto iniciado, nenhuma publicação realizada; .env real não foi alterado. Detalhes operacionais: [guia de notificações](../back/docs/notificacoes.md).
+
 ## Objetivo e situação
 
 O responsável solicitou avisos de pendência e de decisão nas duas aprovações do ADM, tanto dentro do aplicativo como com ele fechado. Informou ter revertido as alterações anteriores de implementação. Não considerar aquela tentativa uma entrega vigente nem reaplicar migrações sem inspecionar código e banco separadamente.
@@ -18,7 +30,7 @@ O responsável solicitou avisos de pendência e de decisão nas duas aprovaçõe
 - FCM Legacy e credencial de submissão à Play Store ficaram sem configuração; não são necessários para essa etapa de push FCM V1.
 - Usuário saiu do assistente; isso não desfaz a credencial salva.
 
-## Ainda falta
+## Pendências registradas antes da implementação (histórico)
 
 1. Configurar android.googleServicesFile para o google-services.json já presente no frontend (existência conferida, conteúdo não lido nesta etapa). Validar correspondência de projeto/pacote. Não confundir esse arquivo com o JSON privado da conta de serviço.
 2. Instalar/configurar expo-notifications e implementar permissões, canal Android, registro do token, vínculo ao usuário, leitura e abertura do aviso.
