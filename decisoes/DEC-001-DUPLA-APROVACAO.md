@@ -6,7 +6,7 @@ Situação: **aceita como regra de produto**.
 
 Origem: instrução explícita do responsável pelo projeto nesta conversa: a jornada deve ser autorizada pelo ADM após sua criação, para poder ocorrer; depois de concluída, deve receber nova autorização para que seu pagamento seja efetuado.
 
-Implementação: **pendente**. Este registro altera a especificação vigente, não o comportamento executável do sistema.
+Implementação: **concluída no código em 24/10/2026**, com migração local, testes HTTP e integração MySQL. Homologação manual no aplicativo e recebimento push em aparelho permanecem pendentes, sem invalidar a entrega de código. Detalhes e evidências em [DEC-004](DEC-004-IMPLEMENTACAO-DUPLA-APROVACAO.md) e no [guia técnico](../../back/docs/jornadas-aprovacoes.md).
 
 ## Contexto e problema
 
@@ -88,6 +88,8 @@ Separar dados da decisão de realização dos dados da decisão de pagamento. N�
 - Preservar registros pagos, cálculos e auditoria. Registrar qualquer mapeamento de estado e validar relatórios após a migração.
 
 ## Questões em aberto
+
+**Atualização de 24/10/2026:** os pontos abaixo registram o planejamento inicial. Foram resolvidos na implementação conforme DEC-004: cancelamento/recriação em vez de edição prévia, legado explícito, cancelamento antes de marcações e uma reserva aberta por prestador. Não tratar esta lista histórica como bloqueio atual.
 
 Estas políticas não foram definidas na instrução original e precisam ser resolvidas antes das partes correspondentes da implementação:
 

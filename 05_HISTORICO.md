@@ -1,5 +1,16 @@
 # 05. Histórico de decisões e entregas
 
+## 24/10/2026 - Duas aprovações implementadas
+
+- Responsável autorizou executar a DEC-001. Criação agora pendente de realização; novas rotas ADM autorizam/rejeitam antes da entrada; decisões de pagamento continuam após saída e conferência RH. Metadados iniciais separados e preservados em correções.
+- Atualizados ações, mensagens, painéis, filtros e detalhe com blocos de realização/pagamento, motivos e identificação de legado. Cancelamento/recriação adotado para rejeição ou mudança de planejamento; uma reserva pendente/liberada/em execução por prestador.
+- Conectados avisos internos/fila push da criação pendente e decisão inicial. Configurações Expo/Firebase e alterações anteriores do frontend preservadas.
+- Migração local encontrou ENUM/colunas novos da tentativa anterior; preparou mapeamento idempotente e controle sem decisão retroativa. Contagem preservada em 3/3; nenhuma jornada ou histórico removidos. Fixtures de testes MySQL revertidas.
+- 533 testes backend aprovados; build/lint sem avisos de código e E2E básico aprovados. Tipos/lint frontend, scripts API/jornadas/push aprovados. MySQL real validou duas aprovações, bloqueios, rejeições, correção preservando a primeira decisão, avisos, quitação, lixeira e notificações.
+- Criados guia jornadas-aprovacoes.md, migração, testes e DEC-004; atualizados memória e guias relacionados. Homologação visual/mobile e concorrência real permanecem pendentes; não iniciado build EAS nem envio push externo.
+- Bundles Android, iOS e web exportados com sucesso; são artefatos de compilação JavaScript, não APK/IPA nem comprovação de recebimento push. Inspeção final confirmou compatibilidade do schema local e reexecução do mapeamento já havia preservado 3/3 jornadas.
+
+
 ## 23/10/2026 - Implementação de notificações internas e suporte push
 
 - Implementados módulo autenticado de notificações, persistência/fila transacional, worker Expo com recibos, leitura por destinatário e gestão de dispositivos. Avisos atuais: saída, conferência e autorização/rejeição de pagamento. Contratos para aprovação inicial preparados; fluxo inicial não foi implementado nesta entrega.

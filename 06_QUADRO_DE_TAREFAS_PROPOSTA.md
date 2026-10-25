@@ -2,7 +2,7 @@
 
 **Situação deste documento: proposta de organização, aguardando avaliação do responsável.**
 
-Atualização de 23/10/2026: GT-10 acrescentada para notificações. Código e testes automatizados concluídos; recebimento real em APK ainda pendente. GT-03 permanece pendente após reversão informada pelo responsável.
+Atualização de 23/10/2026: GT-10 acrescentada para notificações. Código e testes automatizados concluídos; recebimento real em APK ainda pendente. GT-03 teve o código implementado em 24/10/2026; recuperação de migração/homologação permanecem pendentes.
 
 Atualização: 22/10/2026. Base inicial: avaliação local e memória do projeto da mesma data. Atualizações posteriores: T-04.05 registra cancelamento pelo criador; T-04.06 registra seleção, lixeira e exclusão física de jornada/histórico, implementados após a primeira proposta do quadro. O formato do quadro continua em avaliação.
 
@@ -37,8 +37,8 @@ Datas de conclusão, responsáveis por execução e prazos não conhecidos ficam
 | GT-01 | Base técnica e acesso | Feito | Base existente | Implementação observada; homologação fica em GT-07 |
 | GT-10 | Notificações internas e push Android | A fazer | P1, junto de GT-03 | Entrega parcial: código pronto para eventos atuais; APK e validação real pendentes |
 | GT-02 | Memória e organização do projeto | Em andamento | Atual | Memória criada; formato do quadro em avaliação |
-| GT-03 | Duas aprovações do ADM | A fazer | P1 | Regra documentada; implementação não iniciada nesta entrega |
-| GT-04 | Adequar o núcleo de jornadas | A fazer | P1, junto de GT-03 | Fluxo anterior existe; integração ao novo ciclo pendente |
+| GT-03 | Duas aprovações do ADM | A fazer | P1 | Código e migração local concluídos; recuperação em cópia/homologação pendentes |
+| GT-04 | Adequar o núcleo de jornadas | Feito | P1 | Código adaptado e ciclo validado em MySQL; homologação visual em GT-07 |
 | GT-05 | Completar cadastros do RH | A fazer | P2 | APIs existentes; telas pendentes |
 | GT-06 | Completar relatórios e indicadores | A fazer | P2 | APIs e parte dos painéis existentes; entrega incompleta |
 | GT-07 | Homologar qualidade e aplicativo Android | A fazer | P3 | Verificações existentes são parciais; novo fluxo não testado |
@@ -53,7 +53,7 @@ Datas de conclusão, responsáveis por execução e prazos não conhecidos ficam
 
 ### Próxima entrega sugerida
 
-Após avaliar a organização da memória, a próxima frente técnica é GT-03, começando pelas decisões de domínio em T-03.01. Os pontos ainda indefinidos não precisam impedir tarefas independentes de análise e preparação.
+Após a implementação de 24/10/2026, homologar o ciclo completo das duas aprovações e seus avisos em GT-07/GT-10. A recuperação de migração em cópia permanece em T-03.03. Cadastros e relatórios continuam como próximas frentes funcionais.
 
 ## 3. Detalhamento das grandes tarefas
 
@@ -119,84 +119,86 @@ Após avaliar a organização da memória, a próxima frente técnica é GT-03, 
 
 ## GT-03. Duas aprovações do ADM
 
-**Estado:** A fazer. **Prioridade:** P1. **Referência:** [DEC-001](decisoes/DEC-001-DUPLA-APROVACAO.md). **Responsável pela implementação:** não definido.
+**Estado:** A fazer, com implementação de código concluída em 24/10/2026; recuperação/homologação pendentes. **Prioridade:** P1. **Referência:** [DEC-001](decisoes/DEC-001-DUPLA-APROVACAO.md). **Responsável pela implementação:** não definido.
 
-### T-03.01. Fechar as regras de domínio ainda abertas — A fazer
+### T-03.01. Fechar as regras de domínio ainda abertas — Feito
 
-- [ ] ST-03.01.01 — **A fazer:** definir edição e reenvio após rejeição da realização.
-- [ ] ST-03.01.02 — **A fazer:** definir quais alterações antes da entrada invalidam a aprovação inicial.
-- [ ] ST-03.01.03 — **A fazer:** definir tratamento das jornadas legadas sem aprovação prévia.
-- [ ] ST-03.01.04 — **A fazer:** definir cancelamento nos novos estados sem marcações.
-- [ ] ST-03.01.05 — **A fazer:** definir conflito entre jornadas planejadas, autorizadas e em execução.
+- [x] ST-03.01.01 — **Feito:** definir edição e reenvio após rejeição da realização.
+- [x] ST-03.01.02 — **Feito:** definir quais alterações antes da entrada invalidam a aprovação inicial.
+- [x] ST-03.01.03 — **Feito:** definir tratamento das jornadas legadas sem aprovação prévia.
+- [x] ST-03.01.04 — **Feito:** definir cancelamento nos novos estados sem marcações.
+- [x] ST-03.01.05 — **Feito:** definir conflito entre jornadas planejadas, autorizadas e em execução.
 
-**Dependência:** decisões do responsável para as políticas indefinidas. **Resultado esperado:** complementar a DEC-001 sem apresentar propostas técnicas como regras já aceitas.
+**Evidência:** políticas de implementação documentadas na DEC-004: cancelar/recriar, legado explícito, cancelamento pré-entrada e uma reserva aberta por prestador. Não houve nova aprovação em pergunta separada para essas escolhas.
 
-### T-03.02. Projetar estados, contratos e persistência — A fazer
+### T-03.02. Projetar estados, contratos e persistência — Feito
 
-- [ ] ST-03.02.01 — **A fazer:** definir nomes inequívocos para as duas etapas de aprovação/rejeição.
-- [ ] ST-03.02.02 — **A fazer:** definir ações de API, respostas e permissões por etapa.
-- [ ] ST-03.02.03 — **A fazer:** separar autor, instante, resultado e justificativa das duas decisões.
-- [ ] ST-03.02.04 — **A fazer:** planejar histórico e referências à versão aprovada da jornada.
+- [x] ST-03.02.01 — **Feito:** definir nomes inequívocos para as duas etapas de aprovação/rejeição.
+- [x] ST-03.02.02 — **Feito:** definir ações de API, respostas e permissões por etapa.
+- [x] ST-03.02.03 — **Feito:** separar autor, instante, resultado e justificativa das duas decisões.
+- [x] ST-03.02.04 — **Feito:** planejar histórico e referências à versão aprovada da jornada.
 
-### T-03.03. Preparar e validar migração do banco — A fazer
+### T-03.03. Preparar e validar migração do banco — A fazer (recuperação em cópia pendente)
 
-- [ ] ST-03.03.01 — **A fazer:** escrever migração explícita preservando registros e auditoria.
-- [ ] ST-03.03.02 — **A fazer:** mapear estados antigos sem criar aprovações prévias fictícias.
-- [ ] ST-03.03.03 — **A fazer:** validar a migração e a recuperação em base de teste.
-- [ ] ST-03.03.04 — **A fazer:** documentar procedimento e condições para aplicação na base existente.
+- [x] ST-03.03.01 — **Feito:** escrever migração explícita preservando registros e auditoria.
+- [x] ST-03.03.02 — **Feito:** mapear estados antigos sem criar aprovações prévias fictícias.
+- [ ] ST-03.03.03 — **A fazer:** demonstrar recuperação em cópia de ambiente. Aplicação e reexecução idempotente já verificadas no banco local; testes de migração aprovados.
+- [x] ST-03.03.04 — **Feito:** documentar procedimento e condições para aplicação na base existente.
 
 **Dependências:** T-03.01 e T-03.02. Não executar BD/pontoxtra.sql como migração.
 
-### T-03.04. Implementar as duas decisões no backend — A fazer
+### T-03.04. Implementar as duas decisões no backend — Feito
 
-- [ ] ST-03.04.01 — **A fazer:** criar jornada pendente de autorização da realização.
-- [ ] ST-03.04.02 — **A fazer:** permitir decisão inicial somente ao ADM ativo.
-- [ ] ST-03.04.03 — **A fazer:** impedir eventos sem aprovação prévia válida, inclusive via API direta.
-- [ ] ST-03.04.04 — **A fazer:** manter segunda decisão do ADM após encerramento e conferência do RH.
-- [ ] ST-03.04.05 — **A fazer:** preservar primeira decisão quando houver rejeição/correção do pagamento.
-- [ ] ST-03.04.06 — **A fazer:** registrar ambas as decisões com transação, locks e auditoria.
+- [x] ST-03.04.01 — **Feito:** criar jornada pendente de autorização da realização.
+- [x] ST-03.04.02 — **Feito:** permitir decisão inicial somente ao ADM ativo.
+- [x] ST-03.04.03 — **Feito:** impedir eventos sem aprovação prévia válida, inclusive via API direta.
+- [x] ST-03.04.04 — **Feito:** manter segunda decisão do ADM após encerramento e conferência do RH.
+- [x] ST-03.04.05 — **Feito:** preservar primeira decisão quando houver rejeição/correção do pagamento.
+- [x] ST-03.04.06 — **Feito:** registrar ambas as decisões com transação, locks e auditoria.
 
-### T-03.05. Implementar as duas etapas no aplicativo — A fazer
+### T-03.05. Implementar as duas etapas no aplicativo — Feito
 
-- [ ] ST-03.05.01 — **A fazer:** informar, após a criação, que a jornada aguarda autorização para ocorrer.
-- [ ] ST-03.05.02 — **A fazer:** exibir ao ADM pendências e ações distintas de realização e pagamento.
-- [ ] ST-03.05.03 — **A fazer:** bloquear ações operacionais enquanto a realização não estiver autorizada.
-- [ ] ST-03.05.04 — **A fazer:** apresentar separadamente as decisões e justificativas no detalhe/histórico.
-- [ ] ST-03.05.05 — **A fazer:** atualizar contratos, rótulos, filtros e mensagens do novo ciclo.
+- [x] ST-03.05.01 — **Feito:** informar, após a criação, que a jornada aguarda autorização para ocorrer.
+- [x] ST-03.05.02 — **Feito:** exibir ao ADM pendências e ações distintas de realização e pagamento.
+- [x] ST-03.05.03 — **Feito:** bloquear ações operacionais enquanto a realização não estiver autorizada.
+- [x] ST-03.05.04 — **Feito:** apresentar separadamente as decisões e justificativas no detalhe/histórico.
+- [x] ST-03.05.05 — **Feito:** atualizar contratos, rótulos, filtros e mensagens do novo ciclo.
 
 **Critério de conclusão:** critérios da DEC-001 demonstrados em banco, API e interface, com evidências dos testes. Documentação sozinha não conclui esta grande tarefa.
 
+Evidências de 24/10/2026: 533 testes backend, testes MySQL do ciclo/avisos com rollback e verificações frontend. Homologação visual/mobile e concorrência real permanecem em GT-07; recuperação de migração consta de ST-03.03.03.
+
 ## GT-04. Adequar o núcleo de jornadas
 
-**Estado:** A fazer, com implementação anterior existente. **Prioridade:** P1, junto de GT-03. **Observação:** adaptar e validar o que já existe, evitando reescrever sem necessidade.
+**Estado:** Feito no código e testes de integração em 24/10/2026; homologação visual em GT-07. **Prioridade:** P1, junto de GT-03. **Observação:** adaptar e validar o que já existe, evitando reescrever sem necessidade.
 
-### T-04.01. Adequar criação e início efetivo — A fazer
+### T-04.01. Adequar criação e início efetivo — Feito
 
 - [x] ST-04.01.01 — Criar jornada para prestador, função e setor ativos, com preço histórico da função, no fluxo anterior.
 - [x] ST-04.01.02 — Impedir duas jornadas efetivamente em andamento para o mesmo prestador no fluxo anterior.
-- [ ] ST-04.01.03 — **A fazer:** aplicar os critérios de conflito definidos em T-03.01 aos novos estados.
-- [ ] ST-04.01.04 — **A fazer:** distinguir criação, autorização para realização e início efetivo pela entrada.
+- [x] ST-04.01.03 — **Feito:** aplicar os critérios de conflito definidos em T-03.01 aos novos estados.
+- [x] ST-04.01.04 — **Feito:** distinguir criação, autorização para realização e início efetivo pela entrada.
 
-### T-04.02. Integrar eventos e cálculo ao novo ciclo — A fazer
+### T-04.02. Integrar eventos e cálculo ao novo ciclo — Feito
 
 - [x] ST-04.02.01 — Registrar entrada, início/fim do intervalo e saída com horário do servidor.
 - [x] ST-04.02.02 — Validar ordem temporal, intervalo opcional e cálculo líquido/monetário.
-- [ ] ST-04.02.03 — **A fazer:** integrar as regras existentes ao novo estado autorizado para realização, em conjunto com T-03.04.
-- [ ] ST-04.02.04 — **A fazer:** validar encerramento e encaminhamento ao RH sem pular a segunda aprovação.
+- [x] ST-04.02.03 — **Feito:** integrar as regras existentes ao novo estado autorizado para realização, em conjunto com T-03.04.
+- [x] ST-04.02.04 — **Feito:** validar encerramento e encaminhamento ao RH sem pular a segunda aprovação.
 
-### T-04.03. Preservar conferência, correção e pagamento — A fazer
+### T-04.03. Preservar conferência, correção e pagamento — Feito
 
 - [x] ST-04.03.01 — Conferir, rejeitar, corrigir, recalcular, autorizar e registrar pagamento no ciclo anterior.
-- [ ] ST-04.03.02 — **A fazer:** preservar a autorização de realização nas correções posteriores.
-- [ ] ST-04.03.03 — **A fazer:** exigir nova autorização de pagamento quando a versão conferida for corrigida.
-- [ ] ST-04.03.04 — **A fazer:** demonstrar que pagamento exige segunda aprovação, sem herdar a primeira.
+- [x] ST-04.03.02 — **Feito:** preservar a autorização de realização nas correções posteriores.
+- [x] ST-04.03.03 — **Feito:** exigir nova autorização de pagamento quando a versão conferida for corrigida.
+- [x] ST-04.03.04 — **Feito:** demonstrar que pagamento exige segunda aprovação, sem herdar a primeira.
 
-### T-04.04. Adequar cancelamento e consultas — A fazer
+### T-04.04. Adequar cancelamento e consultas — Feito
 
 - [x] ST-04.04.01 — Cancelar jornada sem marcações com motivo e histórico no ciclo anterior.
 - [x] ST-04.04.02 — Consultar lista, detalhes e histórico com filtros no ciclo anterior.
-- [ ] ST-04.04.03 — **A fazer:** aplicar a política de cancelamento aos novos estados.
-- [ ] ST-04.04.04 — **A fazer:** revisar ações disponíveis e histórico de todas as transições.
+- [x] ST-04.04.03 — **Feito:** aplicar a política de cancelamento aos novos estados.
+- [x] ST-04.04.04 — **Feito:** revisar ações disponíveis e histórico de todas as transições.
 
 ### T-04.05. Permitir exclusão lógica pelo criador antes da entrada — Feito
 
@@ -220,7 +222,7 @@ Evidência: [DEC-002](decisoes/DEC-002-EXCLUSAO-PELO-CRIADOR.md); 402 testes bac
 - [x] ST-04.06.06 — Validar purga física e rollback no MySQL com fixtures temporárias, removidas ao final.
 - [x] ST-04.06.07 — Atualizar guias e memória; registrar que homologação manual/Android ainda pertence a GT-07.
 
-Evidência: [DEC-003](decisoes/DEC-003-LIXEIRA-E-EXCLUSAO-DEFINITIVA.md) e [guia de lixeira](../back/docs/jornadas-lixeira.md). GT-04 continua pendente das duas aprovações; esta entrega não encerra a grande tarefa.
+Evidência histórica da lixeira: [DEC-003](decisoes/DEC-003-LIXEIRA-E-EXCLUSAO-DEFINITIVA.md) e [guia de lixeira](../back/docs/jornadas-lixeira.md). Em 24/10/2026, GT-04 foi adaptada e validada com as duas aprovações, conforme DEC-004.
 
 ## GT-05. Completar cadastros do RH
 
@@ -423,10 +425,10 @@ Estado: A fazer (entrega parcial de código em 23/10/2026; homologação física
 - ST-10.03.02 — Feito: permissão explícita, cadastro do celular e remoção no logout.
 - ST-10.03.03 — Feito: abertura da jornada por push e separação entre contas; fallback web.
 
-### T-10.04 — Integrar aprovação inicial — A fazer
+### T-10.04 — Integrar aprovação inicial — Feito
 
-- ST-10.04.01 — A fazer: implementar GT-03; contratos de aviso preparados não substituem a regra de negócio.
-- ST-10.04.02 — A fazer: disparar pendência e decisão de realização nas transações correspondentes.
+- ST-10.04.01 — Feito: implementar o código da dupla aprovação, conforme DEC-004.
+- ST-10.04.02 — Feito: disparar pendência e decisão de realização nas transações correspondentes; validado em MySQL.
 
 ### T-10.05 — Validar e ativar push no aparelho — A fazer
 

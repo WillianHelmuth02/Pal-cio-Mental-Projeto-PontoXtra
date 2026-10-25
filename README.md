@@ -4,6 +4,8 @@ Esta pasta reúne o contexto duradouro do projeto para o desenvolvedor e para as
 
 ## Entrada e salas
 
+Dupla aprovação implementada em 24/10/2026: consultar [DEC-004](decisoes/DEC-004-IMPLEMENTACAO-DUPLA-APROVACAO.md) para políticas, migração, evidências e limites; complementa a DEC-001.
+
 Configuração Android e pendências de push: [07_NOTIFICACOES_CONFIGURACAO.md](07_NOTIFICACOES_CONFIGURACAO.md), atualizado em 23/10/2026.
 
 | Sala | Conteúdo | Quando consultar |

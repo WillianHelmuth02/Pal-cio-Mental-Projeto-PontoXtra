@@ -1,6 +1,6 @@
 # 01. Contexto e identidade do projeto
 
-Última atualização: 22/10/2026.
+Última atualização: 24/10/2026. Dupla aprovação implementada conforme DEC-004; homologação manual/mobile ainda pendente.
 
 ## Problema e objetivo
 
@@ -34,7 +34,7 @@ Não acrescentar esses recursos como exigência implícita da dupla aprovação.
 
 - `front/`: repositório Git independente, Expo/React Native, TypeScript e Expo Router; alvo mobile com execução web de desenvolvimento.
 - `back/`: repositório Git independente, NestJS/TypeScript, TypeORM, API REST/JSON.
-- `BD/`: SQL MySQL; seis tabelas centrais: usuarios, prestadores, funcoes, setores, jornadas e historico_jornada.
+- `BD/`: SQL MySQL; seis tabelas centrais de negócio (usuarios, prestadores, funcoes, setores, jornadas e historico_jornada), mais notificacoes, dispositivos_notificacao, entregas_push e metadados de controle de migrações. Migração explícita, sem sincronização automática.
 - `Documentos/`: artigo, requisitos, termo, dicionário e protótipos; também contém o relatório de avaliação.
 - `output/pdf/`: relatório de avaliação em PDF.
 - `Memoria_Projeto/`: contexto, decisões e acompanhamento entre tarefas.

@@ -1,5 +1,17 @@
 # 03. Próximos passos
 
+## Prioridades vigentes em 24/10/2026
+
+1. Homologar as duas aprovações na interface com Operacional, ADM e RH, conforme [roteiro técnico](../back/docs/jornadas-aprovacoes.md). Código, migração e testes automatizados concluídos; exigir decisão inicial antes da entrada e decisão de pagamento após a conferência.
+2. Preparar API acessível ao aparelho, assinatura e APK preview; habilitar worker de push no ambiente e testar avisos com app aberto/fechado, toque, logout e troca de conta. Não foi iniciado build remoto nem enviado push real nesta entrega.
+3. Completar telas de manutenção do RH e relatório por período/totais; APIs existentes permanecem disponíveis.
+4. Validar concorrência entre conexões, HTTPS, fuso, backup/restauração e desempenho. Recuperação de migração em cópia de ambiente ainda não foi demonstrada.
+5. Atualizar artigo, requisitos, dicionário, diagramas e roteiro da banca para as duas aprovações. Os PDFs históricos não foram alterados.
+
+As políticas complementares estão na [DEC-004](decisoes/DEC-004-IMPLEMENTACAO-DUPLA-APROVACAO.md); não precisam ser decididas novamente para executar o fluxo já implementado.
+
+## Planejamento anterior (histórico; superado onde houver conflito)
+
 **Após implementação das notificações em 23/10/2026:** API, tela e suporte push concluídos no código; eventos atuais de pagamento conectados. Próxima prioridade funcional: dupla aprovação, conectando contratos de avisos da realização. Próxima validação mobile: assinatura/APK preview, URL da API acessível, worker habilitado e recebimento real. Não interpretar suporte push testado com mocks como recebimento confirmado. Guia: [notificacoes.md](../back/docs/notificacoes.md).
 
 **23/10/2026 — preparação de push:** seguir as pendências em [07_NOTIFICACOES_CONFIGURACAO.md](07_NOTIFICACOES_CONFIGURACAO.md). Expo/EAS e credencial FCM V1 preparados; integração, assinatura, build e teste em aparelho pendentes. Conferir estado de código e banco após reversão informada pelo responsável antes de retomar dupla aprovação.

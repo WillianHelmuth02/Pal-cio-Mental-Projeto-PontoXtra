@@ -2,6 +2,8 @@
 
 Registro: 23/10/2026. Situação: infraestrutura parcialmente configurada; notificações ainda não homologadas no aplicativo.
 
+**Atualização de 24/10/2026:** duas aprovações implementadas e avisos de criação pendente/decisão inicial conectados às transações reais. A pendência de implementação descrita nas seções históricas abaixo está resolvida. Próximo passo: homologação em APK, com API acessível e worker habilitado. [DEC-004](decisoes/DEC-004-IMPLEMENTACAO-DUPLA-APROVACAO.md).
+
 ## Atualização de implementação — 23/10/2026
 
 Esta seção atualiza a situação histórica descrita abaixo. Implementados API de avisos por destinatário, leitura, paginação/contador e dispositivos; fila transacional com worker Expo, tentativas, recibos e desativação de token inválido. Eventos conectados: saída → RH, conferência → ADM, decisão de pagamento → RH/criador, excluindo autor. Aprovação inicial ainda não implementada; contratos de aviso preparados sem disparo fictício na criação.

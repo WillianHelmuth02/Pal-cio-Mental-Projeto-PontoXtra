@@ -4,6 +4,7 @@
 
 | Informação | Fonte |
 | --- | --- |
+| Dupla aprovação implementada em 24/10/2026 | `decisoes/DEC-004-IMPLEMENTACAO-DUPLA-APROVACAO.md`, `back/docs/jornadas-aprovacoes.md`, `back/src/jornadas/jornadas.aprovacao.ts`, `aprovacoes.migration.ts`, `aprovacoes.spec.ts`, `back/src/migrate-aprovacoes.ts` |
 | Regra atual de duas aprovações | Instrução do usuário em 22/10/2026, registrada em `decisoes/DEC-001-DUPLA-APROVACAO.md` nesta pasta |
 | Especificação histórica da pré-banca | `Documentos/Artigo_PontoXtra_Pre_Banca_Final.pdf`, especialmente páginas 6 a 12 |
 | Documentos complementares | `Documentos/Requisitos e Regras Pronto.pdf`, `Dicionario_de_Dados_PontoXtra.pdf`, `Termo de Abertura Pronto.pdf` e `_3-Prototipação.pdf` |

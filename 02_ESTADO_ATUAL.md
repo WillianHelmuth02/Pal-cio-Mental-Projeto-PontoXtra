@@ -1,5 +1,19 @@
 # 02. Estado atual e diferença para a regra vigente
 
+## Situação vigente em 24/10/2026
+
+**Dupla aprovação implementada no backend e frontend.** Criação pendente → ADM autoriza realização → entrada/execução → saída → RH confere → ADM autoriza pagamento → RH registra quitação. Decisões têm campos e histórico independentes. Rejeição de realização permite cancelar/recriar; uma reserva aberta por prestador. Avisos de pendência e decisão ligados às duas etapas. Ver [DEC-004](decisoes/DEC-004-IMPLEMENTACAO-DUPLA-APROVACAO.md).
+
+Migração local aplicada/reexecutada sem remoção de linhas (3 jornadas antes/depois); schema ampliado já existia da tentativa anterior. Legado iniciado/encerrado recebe flag sem decisão inicial fictícia; jornadas antigas não iniciadas passam a aguardar autorização. Não foi executado SQL de recriação.
+
+533 testes backend e E2E básico aprovados; build/lint backend, tipos/lint frontend e scripts API/jornadas/push aprovados. Integração MySQL verificou duas decisões, bloqueios, correção, avisos e rollback; lixeira e notificações continuam passando. Compilação não equivale a homologação visual. Recebimento push no APK, concorrência entre conexões, telas de cadastros RH e relatórios completos permanecem pendentes.
+
+O responsável relatou anteriormente ter testado o CRUD na interface Operacional, inclusive a remoção no BD. Essa evidência é do CRUD anterior, não uma homologação manual das duas aprovações.
+
+## Registros históricos de avaliação e preparação (22–23/10/2026)
+
+As descrições de dupla aprovação pendente abaixo retratam as datas anteriores e são superadas pela situação vigente acima.
+
 **Entrega de código em 23/10/2026 — notificações:** avisos internos com contador/leitura, cadastro de dispositivos, fila push Expo com recibos e integração com saída/conferência/decisão de pagamento implementados. Frontend configurado para Firebase e SDK 57. 487 testes backend aprovados; build/lint, tipos, scripts frontend e exportação web aprovados. MySQL real validou fixtures e cascata na purga com rollback. Push no aparelho ainda não homologado; worker depende de PUSH_NOTIFICATIONS_ENABLED=true. Aprovação inicial continua pendente. Esta atualização supera a descrição de dependências ausentes no parágrafo de preparação abaixo. Ver [07_NOTIFICACOES_CONFIGURACAO.md](07_NOTIFICACOES_CONFIGURACAO.md).
 
 **23/10/2026 — notificações:** projeto Expo vinculado ao frontend, pacote Android e eas.json configurados; FCM V1 cadastrado pelo responsável na EAS. google-services.json presente, mas ainda sem googleServicesFile no app.json; expo-notifications ausente do package.json. Usuário informou reversão da implementação anterior. Infraestrutura parcial não comprova dupla aprovação ou push funcionando. Ver [registro de configuração](07_NOTIFICACOES_CONFIGURACAO.md). Banco não foi inspecionado nesta etapa; reversão do código não comprova reversão de migrações.
