@@ -1,6 +1,17 @@
 # 04. Mapa de fontes
 
-Última revisão: 22/10/2026. Caminhos relativos à raiz PontoXtra.
+Última revisão: 28/10/2026. Caminhos relativos à raiz PontoXtra.
+
+## Fontes consolidadas atuais
+
+- Documentos/VISAO_GERAL_ATUAL.md: entregas, como foram feitas, fluxo, cinco CRUDs, cobertura e limitações.
+- Documentos/ESPECIFICACAO_ATUAL.md: escopo/requisitos/regras, estados, telas e diagrama.
+- Documentos/ROTEIRO_HOMOLOGACAO.md: validação integrada pendente.
+- back/docs/api-cobertura.md: inventário de rotas e relação com frontend.
+- BD/README.md e BD/DICIONARIO_ATUAL.md: onze tabelas, campos e FKs inspecionados; back/scripts/inspect-schema.cjs reproduz a consulta somente leitura.
+- front/src/components/cadastros-screen.tsx, usuarios-screen.tsx e relatorios-screen.tsx: novas telas; front/docs: seus guias.
+- front/src/services/relatorios.ts, utils/relatorios.ts e scripts/test-relatorios.cjs: contratos/testes do relatório.
+- Versões antigas de estado e próximos passos: arquivos *_HISTORICO_ATE_28_10_2026.md na memória; PDFs e relatório de 22/10 são históricos.
 
 | Informação | Fonte |
 | --- | --- |

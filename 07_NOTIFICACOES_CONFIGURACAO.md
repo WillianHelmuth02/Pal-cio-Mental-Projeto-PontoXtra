@@ -1,5 +1,7 @@
 # 07. Preparação das notificações Android
 
+**Revisão de 28/10/2026:** este arquivo preserva configuração e evidências de 23–24/10. O frontend atual usa Expo SDK 58; referências SDK 57 abaixo são históricas. Duas aprovações e seus avisos já estão implementados. Pendência vigente é homologar API acessível/worker/APK/recebimento real; ver ../back/docs/notificacoes.md e 03_PROXIMOS_PASSOS.md. Esta revisão não iniciou build ou push externo.
+
 Registro: 23/10/2026. Situação: infraestrutura parcialmente configurada; notificações ainda não homologadas no aplicativo.
 
 **Atualização de 24/10/2026:** duas aprovações implementadas e avisos de criação pendente/decisão inicial conectados às transações reais. A pendência de implementação descrita nas seções históricas abaixo está resolvida. Próximo passo: homologação em APK, com API acessível e worker habilitado. [DEC-004](decisoes/DEC-004-IMPLEMENTACAO-DUPLA-APROVACAO.md).

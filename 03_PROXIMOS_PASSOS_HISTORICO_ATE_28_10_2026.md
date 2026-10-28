@@ -1,0 +1,80 @@
+# 03. Próximos passos
+
+## Complemento em 28/10/2026 — Usuários ADM entregue
+
+- Gestão de usuários implementada na interface; homologar conforme front/docs/usuarios-adm.md, incluindo revogação de sessões e edição da própria conta.
+- Próximo bloco: relatórios por período e totais consolidados, aproveitando APIs existentes.
+- Permanecem pendentes homologação dos cadastros, Android, regularização de tipos/lint e demais verificações operacionais. Esta atualização supera a indicação histórica de usuários como próxima implementação.
+
+## Complemento em 28/10/2026 — Prestadores entregue
+
+- Tela de prestadores concluída no código, com busca, filtros, cadastro/edição e ativação/desativação. Homologar os três cadastros com RH conforme front/docs/cadastros-rh.md.
+- Próximo bloco de implementação: gestão de usuários pelo ADM; depois relatórios por período/totais.
+- Permanecem pendentes regularização global de tipos/lint e homologações já registradas. Esta atualização supera a indicação abaixo de prestadores como próxima implementação.
+
+## Atualização em 28/10/2026 — cadastros RH
+
+- Funções e setores: telas entregues; homologar com RH conforme `front/docs/cadastros-rh.md`.
+- Próximo bloco: tela de prestadores; depois gestão de usuários ADM e relatórios completos.
+- Regularizar erros de tipos existentes em app-tabs, jornadas-screen e use-theme e compatibilidade ESLint/plugin React. Compilação web das novas telas aprovada; verificações globais ainda falham.
+- Demais pendências de aprovações, push, Android e operação continuam vigentes.
+
+## Prioridades vigentes em 24/10/2026
+
+1. Homologar as duas aprovações na interface com Operacional, ADM e RH, conforme [roteiro técnico](../back/docs/jornadas-aprovacoes.md). Código, migração e testes automatizados concluídos; exigir decisão inicial antes da entrada e decisão de pagamento após a conferência.
+2. Preparar API acessível ao aparelho, assinatura e APK preview; habilitar worker de push no ambiente e testar avisos com app aberto/fechado, toque, logout e troca de conta. Não foi iniciado build remoto nem enviado push real nesta entrega.
+3. Completar telas de manutenção do RH e relatório por período/totais; APIs existentes permanecem disponíveis.
+4. Validar concorrência entre conexões, HTTPS, fuso, backup/restauração e desempenho. Recuperação de migração em cópia de ambiente ainda não foi demonstrada.
+5. Atualizar artigo, requisitos, dicionário, diagramas e roteiro da banca para as duas aprovações. Os PDFs históricos não foram alterados.
+
+As políticas complementares estão na [DEC-004](decisoes/DEC-004-IMPLEMENTACAO-DUPLA-APROVACAO.md); não precisam ser decididas novamente para executar o fluxo já implementado.
+
+## Planejamento anterior (histórico; superado onde houver conflito)
+
+**Após implementação das notificações em 23/10/2026:** API, tela e suporte push concluídos no código; eventos atuais de pagamento conectados. Próxima prioridade funcional: dupla aprovação, conectando contratos de avisos da realização. Próxima validação mobile: assinatura/APK preview, URL da API acessível, worker habilitado e recebimento real. Não interpretar suporte push testado com mocks como recebimento confirmado. Guia: [notificacoes.md](../back/docs/notificacoes.md).
+
+**23/10/2026 — preparação de push:** seguir as pendências em [07_NOTIFICACOES_CONFIGURACAO.md](07_NOTIFICACOES_CONFIGURACAO.md). Expo/EAS e credencial FCM V1 preparados; integração, assinatura, build e teste em aparelho pendentes. Conferir estado de código e banco após reversão informada pelo responsável antes de retomar dupla aprovação.
+
+Última atualização: 22/10/2026.
+
+Entrega adicional concluída: exclusão lógica da própria jornada pelo criador, somente antes de marcações, conforme [DEC-002](decisoes/DEC-002-EXCLUSAO-PELO-CRIADOR.md). Ao executar o roteiro integrado, validar também essa ação com login real; ao implementar a dupla aprovação, adaptar sua disponibilidade aos novos estados.
+
+## Prioridade 1: alinhar o ciclo às duas aprovações
+
+Lixeira e exclusão definitiva concluídas conforme [DEC-003](decisoes/DEC-003-LIXEIRA-E-EXCLUSAO-DEFINITIVA.md). Roteiro manual/Android deve incluir seleção, envio, consulta, restauração e purga. Ao preparar outro ambiente, aplicar migrate-lixeira.js antes de executar o código novo.
+
+- Documentação da regra e da memória: concluída nesta tarefa.
+- Implementação da nova regra: pendente; conferir a [DEC-001](decisoes/DEC-001-DUPLA-APROVACAO.md).
+- Resolver políticas de reenvio, alteração após aprovação, legado, cancelamento e conflito de jornadas.
+- Definir contrato de estados, endpoints e dados separados de cada decisão.
+- Preparar migração preservando registros e auditoria; validar em base de teste antes de aplicar em base existente.
+- Implementar criação pendente, decisão inicial do ADM e bloqueio de eventos no servidor.
+- Separar a decisão de pagamento, preservando conferência, correção e quitação.
+- Atualizar telas, mensagens, ações por perfil, filtros, painéis, totais e relatórios.
+- Validar critérios de aceite da decisão, incluindo permissões, rejeição/correção, concorrência e auditoria.
+
+Não marcar essa prioridade como concluída pela mera existência da especificação. Registrar evidências de execução quando houver implementação.
+
+## Prioridade 2: concluir a interface do MVP
+
+- RF03: manutenção de prestadores pelo RH.
+- RF04: manutenção de funções, setores e valores/hora.
+- RF15/RF16: relatório por período e totais consolidados, incluindo as duas etapas de autorização.
+
+## Prioridade 3: validação e operação
+
+- Roteiro integrado com Operacional, RH e ADM e dados de teste conhecidos.
+- Testes em Android 9 e versão recente; rede real de aparelho.
+- Concorrência entre conexões e resposta perdida após commit.
+- HTTPS e política de fuso consistente.
+- Backup diário, retenção mínima de sete cópias e restauração demonstrada.
+- Medição do requisito de 95% das respostas em até dez segundos.
+
+## Prioridade 4: entrega acadêmica
+
+- Atualizar artigo/requisitos, dicionário, diagrama, protótipos e roteiro de demonstração.
+- Reconciliar unicidade do documento, valor/hora derivado da função e cancelamento.
+- Substituir READMEs genéricos por instruções de instalação e execução do PontoXtra.
+- Distinguir resultados demonstrados de etapas futuras; não extrapolar o alcance dos testes existentes.
+
+Não há cronograma de disciplina validado nesta memória. Não assumir datas ou percentuais de conclusão sem fonte.

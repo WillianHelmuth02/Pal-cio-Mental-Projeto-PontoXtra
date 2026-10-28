@@ -1,5 +1,11 @@
 # Quadro de tarefas do PontoXtra
 
+## Revisão de 28/10/2026
+
+Cadastros RH, usuários ADM e relatórios possuem API e interface. Subtarefas de implementação abaixo foram atualizadas; validação pelo aplicativo, reconciliação com massa conhecida e Android continuam pendentes. GT-05/06 não são marcadas como totalmente homologadas. GT-09 recebeu revisão técnica/funcional atual em Markdown, dicionário inspecionado, diagrama e roteiro; PDFs de pré-banca permanecem originais históricos, sem nova edição diagramada.
+
+Gestão de usuários ADM também entregue: /usuarios, criação/edição/perfil/senha confirmada e desativação/reativação, com proteção da própria conta. Não alterar a estrutura proposta do quadro como se já aceita formalmente. Referências: [estado](02_ESTADO_ATUAL.md), [visão detalhada](../Documentos/VISAO_GERAL_ATUAL.md), [roteiro](../Documentos/ROTEIRO_HOMOLOGACAO.md).
+
 **Situação deste documento: proposta de organização, aguardando avaliação do responsável.**
 
 Atualização de 23/10/2026: GT-10 acrescentada para notificações. Código e testes automatizados concluídos; recebimento real em APK ainda pendente. GT-03 teve o código implementado em 24/10/2026; recuperação de migração/homologação permanecem pendentes.
@@ -39,21 +45,21 @@ Datas de conclusão, responsáveis por execução e prazos não conhecidos ficam
 | GT-02 | Memória e organização do projeto | Em andamento | Atual | Memória criada; formato do quadro em avaliação |
 | GT-03 | Duas aprovações do ADM | A fazer | P1 | Código e migração local concluídos; recuperação em cópia/homologação pendentes |
 | GT-04 | Adequar o núcleo de jornadas | Feito | P1 | Código adaptado e ciclo validado em MySQL; homologação visual em GT-07 |
-| GT-05 | Completar cadastros do RH | A fazer | P2 | APIs existentes; telas pendentes |
-| GT-06 | Completar relatórios e indicadores | A fazer | P2 | APIs e parte dos painéis existentes; entrega incompleta |
+| GT-05 | Completar cadastros do RH | A fazer | P2 | APIs/telas entregues em 28/10; homologação pelo aplicativo pendente |
+| GT-06 | Completar relatórios e indicadores | A fazer | P2 | Tela, filtros, paginação/totais entregues; reconciliação visual pendente |
 | GT-07 | Homologar qualidade e aplicativo Android | A fazer | P3 | Verificações existentes são parciais; novo fluxo não testado |
 | GT-08 | Preparar implantação e operação | A fazer | P3 | HTTPS, backups, fuso e desempenho precisam de evidências |
-| GT-09 | Atualizar entrega acadêmica e técnica | A fazer | P4 | Documentos de referência existem; revisão final pendente |
+| GT-09 | Atualizar entrega acadêmica e técnica | A fazer | P4 | Revisão técnica/funcional em Markdown entregue; PDFs originais preservados; apresentação final pendente |
 
 ### O que está sendo acompanhado agora
 
 - T-02.03: apresentar e revisar esta proposta de quadro com o responsável.
 - Nenhuma implementação da dupla aprovação está em andamento nesta etapa documental.
-- Entrega posterior concluída: T-04.05, exclusão lógica pelo criador antes de marcações. A implementação das duas aprovações continua pendente.
+- Entrega posterior concluída: T-04.05, exclusão lógica pelo criador antes de marcações. As duas aprovações foram implementadas em 24/10/2026; homologação continua pendente.
 
 ### Próxima entrega sugerida
 
-Após a implementação de 24/10/2026, homologar o ciclo completo das duas aprovações e seus avisos em GT-07/GT-10. A recuperação de migração em cópia permanece em T-03.03. Cadastros e relatórios continuam como próximas frentes funcionais.
+Após a implementação de 24/10/2026, homologar o ciclo completo das duas aprovações e seus avisos em GT-07/GT-10. A recuperação de migração em cópia permanece em T-03.03. Cadastros, gestão de usuários e relatórios foram entregues no código em 28/10/2026; homologar conforme o roteiro integrado.
 
 ## 3. Detalhamento das grandes tarefas
 
@@ -226,47 +232,47 @@ Evidência histórica da lixeira: [DEC-003](decisoes/DEC-003-LIXEIRA-E-EXCLUSAO-
 
 ## GT-05. Completar cadastros do RH
 
-**Estado:** A fazer, com APIs existentes. **Prioridade:** P2. **Requisitos:** RF03 e RF04.
+**Estado:** A fazer quanto à homologação, com APIs e telas entregues em 28/10/2026. **Prioridade:** P2. **Requisitos:** RF03 e RF04.
 
 ### T-05.01. Entregar manutenção de prestadores — A fazer
 
 - [x] ST-05.01.01 — Disponibilizar API de consulta, criação, edição, inativação e reativação.
-- [ ] ST-05.01.02 — **A fazer:** criar listagem com busca e filtro de ativos/inativos.
-- [ ] ST-05.01.03 — **A fazer:** criar formulário de cadastro e edição com validações.
-- [ ] ST-05.01.04 — **A fazer:** criar detalhes e ações de inativar/reativar pelo RH.
+- [x] ST-05.01.02 — **Feito no código em 28/10/2026:** criar listagem com busca e filtro de ativos/inativos.
+- [x] ST-05.01.03 — **Feito no código em 28/10/2026:** criar formulário de cadastro e edição com validações.
+- [x] ST-05.01.04 — **Feito no código em 28/10/2026:** criar detalhes e ações de inativar/reativar pelo RH.
 - [ ] ST-05.01.05 — **A fazer:** validar permissões e preservação do histórico pelo aplicativo.
 
 ### T-05.02. Entregar manutenção de funções e valores/hora — A fazer
 
 - [x] ST-05.02.01 — Disponibilizar API de manutenção de funções e preço padrão.
-- [ ] ST-05.02.02 — **A fazer:** criar telas de listagem, cadastro e edição.
-- [ ] ST-05.02.03 — **A fazer:** oferecer alteração de situação ativa/inativa.
+- [x] ST-05.02.02 — **Feito no código em 28/10/2026:** criar telas de listagem, cadastro e edição.
+- [x] ST-05.02.03 — **Feito no código em 28/10/2026:** oferecer alteração de situação ativa/inativa.
 - [ ] ST-05.02.04 — **A fazer:** demonstrar que alterar preço padrão não altera jornadas históricas.
 
 ### T-05.03. Entregar manutenção de setores — A fazer
 
 - [x] ST-05.03.01 — Disponibilizar API de manutenção de setores.
-- [ ] ST-05.03.02 — **A fazer:** criar listagem e formulário de cadastro/edição.
+- [x] ST-05.03.02 — **Feito no código em 28/10/2026:** criar listagem e formulário de cadastro/edição.
 - [ ] ST-05.03.03 — **A fazer:** oferecer inativação/reativação pelo RH e validar vínculos históricos.
 
 **Critério de conclusão:** RH mantém os três cadastros pelo aplicativo, respeitando permissões e histórico, sem depender de chamadas manuais à API.
 
 ## GT-06. Completar relatórios e indicadores
 
-**Estado:** A fazer, com entrega parcial existente. **Prioridade:** P2. **Dependência para estados finais:** contratos de GT-03.
+**Estado:** A fazer quanto à homologação, com relatório/totais entregues no código em 28/10/2026. **Prioridade:** P2. **Dependência para estados finais:** contratos de GT-03.
 
-### T-06.01. Entregar relatório resumido por período — A fazer
+### T-06.01. Entregar relatório resumido por período — Feito no código; homologação em GT-07
 
 - [x] ST-06.01.01 — Disponibilizar API de relatório com filtros e paginação no modelo anterior.
-- [ ] ST-06.01.02 — **A fazer:** criar tela com período, prestador e status.
-- [ ] ST-06.01.03 — **A fazer:** apresentar trabalhador, data, horas, valor e situação.
-- [ ] ST-06.01.04 — **A fazer:** permitir percorrer os resultados paginados e tratar vazio/erro.
+- [x] ST-06.01.02 — **Feito no código em 28/10/2026:** criar tela com período, prestador e status.
+- [x] ST-06.01.03 — **Feito no código em 28/10/2026:** apresentar trabalhador, data, horas, valor e situação.
+- [x] ST-06.01.04 — **Feito no código em 28/10/2026:** permitir percorrer os resultados paginados e tratar vazio/erro.
 
 ### T-06.02. Consolidar totais e pendências — A fazer
 
 - [x] ST-06.02.01 — Disponibilizar API de totais e painéis parciais por perfil no modelo anterior.
-- [ ] ST-06.02.02 — **A fazer:** diferenciar pendências de realização e de pagamento.
-- [ ] ST-06.02.03 — **A fazer:** apresentar visão consolidada, incluindo pagos e demais estados.
+- [x] ST-06.02.02 — **Feito no código em 28/10/2026:** diferenciar pendências de realização e de pagamento.
+- [x] ST-06.02.03 — **Feito no código em 28/10/2026:** apresentar visão consolidada, incluindo pagos e demais estados.
 - [ ] ST-06.02.04 — **A fazer:** conferir valores exibidos com uma base de teste de resultados conhecidos.
 
 **Critério de conclusão:** RF15/RF16 utilizáveis no aplicativo e coerentes com o novo ciclo e com os filtros. Exportação PDF/CSV não é exigência atual do MVP.

@@ -4,6 +4,8 @@ Esta pasta reúne o contexto duradouro do projeto para o desenvolvedor e para as
 
 ## Entrada e salas
 
+**Revisão vigente de 28/10/2026:** cinco módulos CRUD com interface e API, relatórios por período/totais e documentação consolidada. Consultar [estado atual](02_ESTADO_ATUAL.md), [visão detalhada](../Documentos/VISAO_GERAL_ATUAL.md), [especificação](../Documentos/ESPECIFICACAO_ATUAL.md), [API](../back/docs/api-cobertura.md) e [banco inspecionado](../BD/DICIONARIO_ATUAL.md). As antigas versões de estado/próximos passos foram preservadas em arquivos HISTORICO_ATE_28_10_2026; não representam pendências atuais.
+
 Dupla aprovação implementada em 24/10/2026: consultar [DEC-004](decisoes/DEC-004-IMPLEMENTACAO-DUPLA-APROVACAO.md) para políticas, migração, evidências e limites; complementa a DEC-001.
 
 Configuração Android e pendências de push: [07_NOTIFICACOES_CONFIGURACAO.md](07_NOTIFICACOES_CONFIGURACAO.md), atualizado em 23/10/2026.
@@ -62,3 +64,7 @@ Implementação: pendente / parcial / concluída, com evidências
 `PontoXtra/AGENTS.md`, `front/AGENTS.md` e `back/AGENTS.md` apontam para esta memória. Agentes que reconhecem `AGENTS.md` recebem esse caminho no escopo correspondente. Para ferramentas que não leem esse arquivo automaticamente, peça explicitamente a leitura de `Memoria_Projeto/README.md` ao abrir o projeto.
 
 A pasta fica ao lado dos dois repositórios, e não dentro deles. Ao clonar apenas `front` ou `back`, será necessário compartilhar também esta memória. Nenhum repositório novo foi inicializado para alterar a organização existente.
+
+## Conectividade Android — revisão de 28/10/2026
+
+Consultar [08_ANDROID_REDE_LOCAL.md](08_ANDROID_REDE_LOCAL.md): API local iniciada, MySQL verificado, URL corrigida e acesso confirmado pelo usuário no tablet e smartphone. Novo APK ainda não gerado: envio ao EAS depende de autorização explícita após bloqueio da revisão automática.
